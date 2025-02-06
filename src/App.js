@@ -5,7 +5,7 @@ import Home from './components/Home';
 import BucketOperations from './components/BucketOperations';
 import ObjectOperations from './components/ObjectOperations';
 import ViewBuckets from './components/Buckets/ViewBuckets';
-import CreateBucket from './components/Buckets/CreateBucket';
+import CreateBucket from './components/Buckets/Createbucket';
 import DeleteBucket from './components/Buckets/DeleteBucket';
 import ViewObjects from './components/Objects/ViewObjects';
 import UploadObject from './components/Objects/UploadObject';
