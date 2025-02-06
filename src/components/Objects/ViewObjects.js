@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { getObjects } from '../../API/objectApi';
+import HomeButton from '../HomeButton';
 
 function ViewObjects() {
   const [bucketName, setBucketName] = useState('');
@@ -23,6 +24,7 @@ function ViewObjects() {
           </li>
         )) : <p>No objects found.</p>}
       </ul>
+      <HomeButton />
     </div>
   );
 }

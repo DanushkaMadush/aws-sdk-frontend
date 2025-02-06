@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { deleteObject } from '../../API/objectApi';
+import HomeButton from '../HomeButton';
 
 function DeleteObject() {
   const [bucketName, setBucketName] = useState('');
@@ -21,6 +22,7 @@ function DeleteObject() {
       <input type="text" className="form-control mb-2" placeholder="Enter bucket name" onChange={(e) => setBucketName(e.target.value)} />
       <input type="text" className="form-control mb-2" placeholder="Enter object key" onChange={(e) => setKey(e.target.value)} />
       <button className="btn btn-danger" onClick={handleDelete}>Delete</button>
+      <HomeButton />
     </div>
   );
 }

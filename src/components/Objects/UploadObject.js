@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { uploadObject } from '../../API/objectApi';
+import HomeButton from '../HomeButton';
 
 function UploadObject() {
   const [bucketName, setBucketName] = useState('');
@@ -21,6 +22,7 @@ function UploadObject() {
       <input type="text" className="form-control mb-2" placeholder="Enter bucket name" onChange={(e) => setBucketName(e.target.value)} />
       <input type="file" className="form-control mb-2" onChange={(e) => setFile(e.target.files[0])} />
       <button className="btn btn-success" onClick={handleUpload}>Upload</button>
+      <HomeButton />
     </div>
   );
 }

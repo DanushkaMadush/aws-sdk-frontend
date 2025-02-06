@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getBuckets } from '../../API/bucketApi';
+import HomeButton from '../HomeButton';
 
 function ViewBuckets() {
   const [buckets, setBuckets] = useState([]);
@@ -18,6 +19,7 @@ function ViewBuckets() {
       <ul className="list-group">
         {buckets.map((bucket) => <li key={bucket} className="list-group-item">{bucket}</li>)}
       </ul>
+      <HomeButton />
     </div>
   );
 }

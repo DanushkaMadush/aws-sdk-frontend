@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { downloadObject } from '../../API/objectApi';
+import HomeButton from '../HomeButton';
+
 
 function DownloadObject() {
   const [bucketName, setBucketName] = useState('');
@@ -27,6 +29,7 @@ function DownloadObject() {
       <input type="text" className="form-control mb-2" placeholder="Enter bucket name" onChange={(e) => setBucketName(e.target.value)} />
       <input type="text" className="form-control mb-2" placeholder="Enter object key" onChange={(e) => setKey(e.target.value)} />
       <button className="btn btn-warning" onClick={handleDownload}>Download</button>
+      <HomeButton />
     </div>
   );
 }

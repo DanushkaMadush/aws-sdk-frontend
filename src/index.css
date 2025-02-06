@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.home-button-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
