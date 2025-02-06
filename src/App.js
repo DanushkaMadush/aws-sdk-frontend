@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Bucket from './components/bucket.js';
+import Object from './components/object.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container mt-4">
+        <h1 className="text-center">AWS S3 Manager</h1>
+        <div className="d-flex justify-content-center gap-3">
+          <Link to="/buckets" className="btn btn-primary">Buckets</Link>
+          <Link to="/objects" className="btn btn-secondary">Objects</Link>
+        </div>
+        <Routes>
+          <Route path="/buckets" element={<Bucket />} />
+          <Route path="/objects" element={<Object />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
